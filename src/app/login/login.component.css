@@ -1,6 +1,4 @@
 .card {
-  width: 30%;
-  height: 50vh !important;
-  margin: auto;
   margin-top: 10%;
+  width: max-content;
 }
