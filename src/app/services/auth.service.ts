@@ -10,7 +10,7 @@ import { environment } from '../../environments/environment';
 export class AuthService {
   env;
   gitURL = 'https://github.com/login/oauth/';
-  constructor(private http: HttpClient, private route: Router) {
+  constructor(private http: HttpClient) {
     this.env = environment;
   }
 
