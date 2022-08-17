@@ -1,0 +1,5 @@
+{
+  "OAUTH_CLIENT": "express-client",
+  "OAUTH_SECRET": "express-secret",
+  "REDIRECT_API_URL": "http://localhost:4200/home"
+}
