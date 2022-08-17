@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { LoginComponent } from './login/login.component';
-import { AuthService } from './auth.service';
+import { FormsModule } from '@angular/forms';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { AuthService } from './auth.service';
     RepositoriesComponent,
     LoginComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [AuthService],
   bootstrap: [AppComponent],
 })

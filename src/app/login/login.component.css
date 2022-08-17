@@ -1,10 +1,6 @@
-.container {
-  display: flex;
-  flex-direction: column;
-}
 .card {
-  width: 20%;
-  /* height: 50% !important; */
+  width: 30%;
+  height: 50vh !important;
   margin: auto;
   margin-top: 10%;
 }

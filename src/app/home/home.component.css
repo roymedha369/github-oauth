@@ -1,0 +1,14 @@
+.card {
+  margin: 2%;
+}
+nav {
+  margin-bottom: 5%;
+}
+.star {
+  font-size: small;
+  color: grey;
+  text-align: right;
+}
+li {
+  cursor: pointer;
+}

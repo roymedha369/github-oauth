@@ -1,1 +1,71 @@
-<p>home works!</p>
+<div class="container">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Your repositories</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" [routerLink]="['/user-repos']"
+              >Search Public Repositories</a
+            >
+          </li>
+        </ul>
+        <div>
+          <span class="badge rounded-pill bg-dark text-light m-2">{{
+            userName
+          }}</span>
+          <button class="btn btn-outline-danger btn-sm" (click)="logOut()">
+            Log Out
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="row" *ngIf="!showListFlag">
+    <div class="d-flex justify-content-center">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div
+      class="col-sm-12 col-lg-3 col-md-3 col-lg-offset-1 col-md-offset-1 col-sm-offset-1"
+      *ngFor="let repo of repoList"
+      [hidden]="!repoList"
+    >
+      <div class="card card-block">
+        <div class="card-header">
+          <div class="row">
+            {{ repo.name }}
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <a [href]="repo.html_url" target="_blank">Go to Repository</a>
+            <span class="star"> {{ repo.stargazers_count }} Stars</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div *ngIf="!repoList && showListFlag">
+      <div class="alert alert-danger text-center" role="alert">
+        The user doesn't have any public repositories!
+      </div>
+    </div>
+  </div>
+</div>

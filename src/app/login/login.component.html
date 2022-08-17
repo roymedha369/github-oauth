@@ -1,4 +1,4 @@
-<container>
+<div class="container">
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <div class="container-fluid">
       <a class="navbar-brand" href="/">Find Your Repos!</a>
@@ -16,8 +16,13 @@
     </div>
   </nav>
   <div class="card">
-    <div class="card-body">
-      <button class="btn" (click)="login()">Login using GitHub</button>
+    <div class="card-title text-center mt-3">
+      <h5>Please Login to Continue</h5>
+    </div>
+    <div class="card-body text-center mt-3">
+      <button class="btn btn-success" (click)="login()">
+        Login using GitHub
+      </button>
     </div>
   </div>
-</container>
+</div>
